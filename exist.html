@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <link rel="icon" href="favicon-32x32.png" type="image/png">
+    </head>
+    <body>
+        <h1 id="title">Harry Potter Characters - Existance</h1>
+        <div class="filters">
+            <script>
+                function reloadPage() {
+                  location.reload();
+                }
+                function redirectToPage() {
+                    const targetPageUrl = 'index.html';
+                    window.location.href = targetPageUrl;
+                }
+            </script>
+            <button class="button-17" onclick="reloadPage()">All</button>
+            <button class="button-17" id="filter-alive">Alive</button>
+            <button class="button-17" id="filter-dead">Dead</button>
+            <button class="button-17" onclick="redirectToPage()">Home</button>
+        </div>
+    
+        <div class="character-cards" id="character-list">
+            <script src="exist_script.js"></script>
+        </div>
+    </body>
+</html> 
+

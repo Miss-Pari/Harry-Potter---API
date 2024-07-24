@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <link rel="icon" href="favicon-32x32.png" type="image/png">
+    </head>
+    <body>
+        <h1 id="title">Harry Potter Characters with their Spells</h1>
+        <div class="filters">
+            <script>
+                function home() {
+                    const home = 'index.html';
+                    window.location.href = home;
+                }
+                function house(){
+                    const house = 'house.html';
+                    window.location.href = house;
+                }
+            </script>
+            <button class="button-17" onclick="house()">House</button>
+            <button class="button-17" onclick="home()">Home</button>
+        </div>
+    
+        <div class="character-cards" id="character-list">
+            <script src="spell_script.js"></script>
+        </div>
+    </body>
+</html> 
+

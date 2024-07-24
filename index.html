@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <link rel="icon" href="favicon-32x32.png" type="image/png">
+    </head>
+    <body>
+        <h1 id="title">Harry Potter Characters</h1>
+        <div class="filters">
+            <script>
+                function reloadPage() {
+                  location.reload();
+                }
+                function redirectToPage() {
+                    const targetPageUrl = 'house.html';
+                    window.location.href = targetPageUrl;
+                }
+                function viewExist(){
+                    const go = 'exist.html';
+                    window.location.href = go;
+                }
+                function viewAn(){
+                    const an = 'an.html';
+                    window.location.href = an;
+                }
+            </script>
+            <button class="button-17" onclick="reloadPage()">All</button>
+            <button class="button-17" id="filter-student">Students</button>
+            <button class="button-17" id="filter-staff">Staff</button>
+            <button class="button-17" onclick="redirectToPage()">House</button>
+            <button class="button-17" onclick="viewExist()">Existance</button>
+            <button class="button-17" onclick="viewAn()">ancestry</button>
+        </div>
+    
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="https://ik.imagekit.io/hpapi/harry.jpg" style="width:100%">
+              <div class="text">Harry Potter</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="https://ik.imagekit.io/hpapi/hermione.jpeg" style="width:100%">
+              <div class="text">Hermione Granger</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="https://ik.imagekit.io/hpapi/ron.jpg" style="width:100%">
+              <div class="text">Ron Weasley</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+        </div>
+
+        <div class="character-cards" id="character-list">
+            <script src="srcipt.js"></script>
+        </div>
+    </body>
+</html> 
+
